@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>My App</title>
+    </head>
+    <body>
+        <h1>Welcome to my app!</h1>
+        <p>Here is some content.</p>
+        <div>
+            Name  : {{name}} <br>
+            Age   : {{age}} <br>
+            Title : {{title}} <br>
+            Skills: <ul>{% for n in skills %} <li>{{n}}</li> {% endfor %}</ul>
+            Experience :
+            <table border="1">
+                <tr>
+                    <th>Title</th>
+                    <th>Company</th>
+                    <th>Years</th>
+                </tr>
+                {% for exp in experience %}
+                <tr>
+                    <td>{{exp.title}}</td>
+                    <td>{{exp.company}}</td>
+                    <td>{{exp.years}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+    </body>
+</html>
